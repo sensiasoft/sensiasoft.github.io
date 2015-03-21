@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><script src="js/ga.js" async="" type="text/javascript"></script>
+<title>Sensia Software - Contact Us</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="Website of Sensia Software LLC">
+<meta name="keywords" content="sensor web, OGC, geospatial, network, interoperability">
+<meta name="robots" content="index, follow, noarchive">
+<meta name="googlebot" content="noarchive">
+<meta name="google-site-verification" content="LdHN761izcLCQLmLzJBFUNyBg_sH8H-le3RmYLMkVeU">
+<link rel="icon" type="image/png" href="images/favicon-drop.png">
+<link rel="stylesheet" type="text/css" media="screen" href="css/screen.css">
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-5799482-1']);
+_gaq.push(['_trackPageview']);
+_gaq.push(['_trackPageLoadTime']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+</head>
+
+
+
+<body>
+
+
+
+
+<!--header -->
+
+<div id="header-wrap"><div id="header">
+
+
+
+	<a name="top"></a>
+
+
+
+	<h1 id="logo-text"><a href="http://www.sensiasoftware.com/" title="">Sensia Software</a></h1>
+
+	<p id="slogan">Innovation for a Sustainable Development</p>
+
+
+
+	<div id="nav">
+
+		<ul>
+
+			<li id="current"><a href="index.html">Home</a></li>
+
+			<li><a href="vision.html">Our Vision</a></li>
+
+			<li><a href="projects.html">Projects</a></li>
+
+			<li><a href="technologies.html">Technologies</a></li>
+
+			<li><a href="references.html">References</a></li>
+
+			<li><a href="contact.html">Contact Us</a></li>
+
+		</ul>
+
+	</div>
+
+<!--/header-->
+
+</div></div>
+
+	
+
+<!-- content-outer -->
+
+<div id="content-wrap" class="clear">
+
+   <div id="content">
+     
+     <div id="main">
+       <h2>Contact Us</h2>
+       <div id="div-contact-form">
+
+<form id="form-contact-form" method="POST" action="/_ah/plugin/form/send">
+ <input name="form-name" value="contact-form" type="hidden">
+
+ <div id="messages-contact-form"> </div>
+
+<div class="field-name">
+  <label>Name</label>
+
+    <input name="name" size="20" type="text">
+    
+
+</div>
+<div class="field-email">
+  <label>Email</label>
+
+    <input name="email" size="20" type="text">
+    
+
+</div>
+<div class="field-message">
+  <label>Message</label>
+
+    <textarea name="message" rows="10" cols="60"></textarea>
+    
+
+</div>
+<div id="recaptcha">&nbsp;</div>
+<input id="recaptchaChallenge" type="hidden">
+<input id="recaptchaResponse" type="hidden">
+<div class="form-buttons">
+  <input value="Send" type="submit">
+  <input value="Reset" type="reset">
+</div>
+</form>
+</div>
+<script type="text/javascript">
+$(function() {
+  $('#form-contact-form').ajaxForm({
+    dataType:'json',
+    beforeSubmit: formValidate,
+    success: function(r) {
+      if (r.result == 'success') {
+         formInfo(r.message);
+         $('#form-contact-form')[0].reset();
+      }
+      else {
+         formError(r.message);
+      }
+   	  Recaptcha.reload();
+    },
+    error : function() {
+      formError('Error occured during form submition.');
+      Recaptcha.reload();
+    }
+  });
+
+  Recaptcha.create('6LcfVcUSAAAAAEBLRfmfk9Xl2uRNahXeYp5irEPr',
+    'recaptcha', {
+        theme:'red', callback: Recaptcha.focus_response_field});
+});
+
+function formInfo(msg) {
+    $('#messages-contact-form').html('<span class="info">' + msg + '</span>');
+}
+
+function formError(msg) {
+    $('#messages-contact-form').html('<span class="error">' + msg + '</span>');
+}
+
+function formValidate(values, jQuerySet, options) {
+	var valid = true;
+
+    var value = $('input[name="name"], textarea[name="name"]').val(); 
+    if (value == '') {
+        formError('Name is empty. Please provide the value.');
+        valid = false;
+    }
+
+
+
+
+
+
+    var value = $('input[name="email"], textarea[name="email"]').val(); 
+    if (value == '') {
+        formError('Email is empty. Please provide the value.');
+        valid = false;
+    }
+    var value = $('input[name="email"], textarea[name="email"]').val(); 
+    var filter = /[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/; 
+    if (!filter.test(value)) {
+        formError('Invalid email address');
+        valid = false;
+    }
+
+
+
+
+
+
+    var value = $('input[name="message"], textarea[name="message"]').val(); 
+    if (value == '') {
+        formError('Message is empty. Please provide the value.');
+        valid = false;
+    }
+
+
+
+
+
+	return valid;
+}
+
+</script>
+
+     </div>
+
+     
+   </div>
+
+<!-- /content-out -->
+
+</div>
+
+
+<!-- footer-bottom -->
+
+<div id="footer-bottom">
+
+
+
+	<p class="bottom-left">
+
+		© 2015 <strong>Copyright Sensia Software LLC</strong>&nbsp; &nbsp; &nbsp;
+
+	</p>
+
+
+
+	<p class="bottom-right">
+
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> |
+
+	  <a href="http://validator.w3.org/check/referer">XHTML</a>	|
+
+		<a href="http://www.sensiasoftware.com/">Home</a> |
+
+		<a href="http://www.sensiasoftware.com/sitemap">Sitemap</a> |
+
+    <strong><a href="#top">Back to Top</a></strong>
+
+   </p>
+
+
+
+<!-- /footer-bottom-->
+
+</div>
+
+
+
+
+
+
+</body></html>
