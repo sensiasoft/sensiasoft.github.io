@@ -367,6 +367,10 @@ section#contact .form-group textarea.form-control {
     height: 176px;
 }
 
+section#contact .g-recaptcha div {
+    margin: auto;
+}
+
 footer {
     padding: 25px 0 15px 0;
     text-align: center;
